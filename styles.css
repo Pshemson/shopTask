@@ -15,7 +15,8 @@ html, body {
   top: 210px; }
 
 .content {
-  max-width: 1530px; }
+  max-width: 1530px;
+  margin: 0 auto; }
 
 .banner {
   background-color: #ea2423;
@@ -26,13 +27,15 @@ html, body {
   position: relative; }
 
 .productsList {
-  padding: 0; }
+  padding: 0;
+  margin-left: -15px;
+  margin-top: 0; }
   .productsList li {
     height: 460px;
-    width: 360px;
     border: 1px solid #d5d3cd;
     display: inline-block;
-    margin: 0 15px 15px 15px; }
+    margin: 15px 15px;
+    width: calc(100% / 4); }
     .productsList li a {
       cursor: pointer; }
     .productsList li p {
@@ -69,7 +72,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 16px 0 16px 0; }
+  margin: 16px 0 0 0; }
 
 .timeBox {
   display: flex;
