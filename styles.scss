@@ -25,6 +25,12 @@ html, body {
 }
 
 @mixin medium {
+  @media (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin large {
   @media (min-width: 1200px) {
     @content;
   }
@@ -43,12 +49,18 @@ html, body {
   margin: 0 auto;
 }
 
+//Welcome section
 
 .banner {
   background-color: rgb(234,36,35);
   width: 1530px;
   height: 300px;
 }
+
+
+
+
+//Products section
 
 .productsBox {
 }
@@ -76,7 +88,7 @@ html, body {
     p {
       border: 1px solid red;
       display: inline-block;
-      padding: 9px;
+      padding: 4px 2px;
       color: red;
       position: absolute;
       right: -1px;
@@ -95,7 +107,7 @@ html, body {
       margin: 15px 15px;
       width: calc(100% / 3 - 34px);
     }
-    @include medium {
+    @include large {
       height: 460px;
       border: 1px solid #d5d3cd;
       display: inline-block;
@@ -104,7 +116,7 @@ html, body {
       p {
         border: 1px solid red;
         display: inline-block;
-        padding: 13px;
+        padding: 9px 10px;
         color: red;
         position: absolute;
         right: -1px;
@@ -135,12 +147,14 @@ html, body {
     color: red;
     font-weight: bold;
     font-size: 21px;
+    margin: 0;
   }
   .priceOld {
     font-size: 15px;
     text-decoration: line-through;
   }
   .nameBrand {
+    margin: 0;
     a {
       font-size: 13px;
       font-weight: 400;
@@ -154,12 +168,25 @@ html, body {
   display: flex;
   position: absolute;
   top: 10px;
-  left: 46px;
+  left: 9px;
   align-items: center;
+  }
+  @include large {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 46px;
+  }
   span {
     margin-left: 10px;
+    font-size: 12px;
+    @include medium {
+        margin-left: 10px;
+        font-size: 14px;
+      }
   }
-}
+
+
 
 .titleBox {
   display: flex;

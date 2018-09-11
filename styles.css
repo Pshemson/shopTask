@@ -42,7 +42,7 @@ html, body {
     .productsList li p {
       border: 1px solid red;
       display: inline-block;
-      padding: 9px;
+      padding: 4px 2px;
       color: red;
       position: absolute;
       right: -1px;
@@ -68,7 +68,7 @@ html, body {
         .productsList li p {
           border: 1px solid red;
           display: inline-block;
-          padding: 13px;
+          padding: 9px 10px;
           color: red;
           position: absolute;
           right: -1px;
@@ -92,25 +92,39 @@ html, body {
   .productInfo .priceNew {
     color: red;
     font-weight: bold;
-    font-size: 21px; }
+    font-size: 21px;
+    margin: 0; }
   .productInfo .priceOld {
     font-size: 15px;
     text-decoration: line-through; }
-  .productInfo .nameBrand a {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #979797;
-    text-decoration: none; }
+  .productInfo .nameBrand {
+    margin: 0; }
+    .productInfo .nameBrand a {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 19px;
+      color: #979797;
+      text-decoration: none; }
 
 .cartBox {
   display: flex;
   position: absolute;
   top: 10px;
-  left: 46px;
+  left: 9px;
   align-items: center; }
-  .cartBox span {
-    margin-left: 10px; }
+
+@media (min-width: 1200px) {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 46px; }
+span {
+  margin-left: 10px;
+  font-size: 12px; }
+  @media (min-width: 960px) {
+    span {
+      margin-left: 10px;
+      font-size: 14px; } }
 
 .titleBox {
   display: flex;
