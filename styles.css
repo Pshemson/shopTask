@@ -28,14 +28,13 @@ html, body {
 
 .productsList {
   padding: 0;
-  margin-left: -15px;
-  margin-top: 0; }
+  margin: 0 -17px 0 -15px; }
   .productsList li {
     height: 460px;
     border: 1px solid #d5d3cd;
     display: inline-block;
     margin: 15px 15px;
-    width: calc(100% / 4); }
+    width: calc(100% / 4 - 34px); }
     .productsList li a {
       cursor: pointer; }
     .productsList li p {
