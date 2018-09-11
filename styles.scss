@@ -9,6 +9,27 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+//Mixins
+//RWD:  Minimum widths to apply styles (mobile first)
+
+@mixin xSmall {
+  @media (min-width: 460px) {
+    @content;
+  }
+}
+
+@mixin Small {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 .container {
   max-width: 1903px;
   max-height: 2084px;
@@ -42,25 +63,54 @@ html, body {
   margin: 0 -17px 0 -15px;
   li {
     height: 460px;
-    //width: 360px;
     border: 1px solid #d5d3cd;
     display: inline-block;
     margin: 15px 15px;
-    width: calc(100% / 4 - 34px);
+    width: calc(100% / 2 - 34px);
+    &:hover {
+      border: 1px solid #000000;
+    }
     a {
       cursor: pointer;
     }
     p {
       border: 1px solid red;
       display: inline-block;
-      padding: 13px;
+      padding: 9px;
       color: red;
       position: absolute;
       right: -1px;
       top: -1px;
       margin: 0;
+      font-size: 13px;
       span {
         font-weight: bold;
+      }
+    }
+
+    @include Small {
+      height: 460px;
+      border: 1px solid #d5d3cd;
+      display: inline-block;
+      margin: 15px 15px;
+      width: calc(100% / 3 - 34px);
+    }
+    @include medium {
+      height: 460px;
+      border: 1px solid #d5d3cd;
+      display: inline-block;
+      margin: 15px 15px;
+      width: calc(100% / 4 - 34px);
+      p {
+        border: 1px solid red;
+        display: inline-block;
+        padding: 13px;
+        color: red;
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        margin: 0;
+        font-size: 15px;
       }
     }
   }
@@ -75,6 +125,30 @@ html, body {
 .productInfo {
   position: absolute;
   bottom: 12px;
+  margin-left: 11px;
+  h2 {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 400;
+  }
+  .priceNew {
+    color: red;
+    font-weight: bold;
+    font-size: 21px;
+  }
+  .priceOld {
+    font-size: 15px;
+    text-decoration: line-through;
+  }
+  .nameBrand {
+    a {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 19px;
+      color: #979797;
+      text-decoration: none;
+    }
+  }
 }
 .cartBox {
   display: flex;
