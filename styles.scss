@@ -54,8 +54,58 @@ html, body {
 .banner {
   background-color: rgb(234,36,35);
   height: 300px;
+  position: relative;
 }
 
+.firstPart {
+  position: absolute;
+  left: 82px;
+  top: 30px;
+  span {
+    p {
+      color: rgb(255,239,58);
+      font-weight: bold;
+      font-size: 46px;
+      margin: 0;
+    }
+    &:nth-of-type(1) {
+      position: absolute;
+      top: 94px;
+      font-size: 46px;
+      left: 8px;
+      font-weight: bold;
+      color: white;
+      line-height: 23px;
+    }
+    &:nth-of-type(2) {
+      position: absolute;
+      font-size: 25px;
+      color: white;
+      border: 1px solid black;
+      background: black;
+      padding: 19px 42px;
+      left: 225px;
+      width: 290px;
+      top: 17px;
+    }
+    &:nth-of-type(3) {
+      padding: 18px 2px;
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+      background: white;
+      position: absolute;
+      top: 169px;
+      left: 334px;
+      transform: rotate(15deg);
+      text-align: center;
+      font-size: 17px;
+      img {
+        transform: rotate(-19deg);
+      }
+    }
+  }
+}
 
 
 
