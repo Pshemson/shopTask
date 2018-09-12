@@ -1,5 +1,5 @@
 const settings = {
-  visibleProducts: 3
+  visibleProducts: 8
 };
 
 const renderProduct = (product, ul, isVisible) => {
@@ -15,7 +15,7 @@ if (isVisible) {
 productContainer.innerHTML = `
 <div class="cartBox">
             <img src="img/cart_icon.png">
-            <span>sztuk: 1</span>
+            <span>sztuk: ${product.stockId}</span>
           </div>
           <div class="saveAmount">
             <p>oszczędzasz:
@@ -25,10 +25,10 @@ productContainer.innerHTML = `
               <a href="#"><img src="https://outletmeblowy.pl/environment/cache/images/300_300_productGfx_${product.main_image}.jpg"></a>
             </div>
             <div class="productInfo">
-<span class="priceNew">3690 zł</span>
+<span class="priceNew">${product.price.gross.final}</span>
               <span class="priceOld">5690 zł</span>
-              <a href="#"><h2>Kanapa 3 firmy Kler kolekcja Canone W001</h2></a> 
-              <span class="nameBrand"><a href="#">Grupa Kler</a></span>
+              <a href="#"><h2>${product.name}</h2></a> 
+              <span class="nameBrand"><a href="#">${product.producer.name}</a></span>
             </div>
           </div>`;
 
