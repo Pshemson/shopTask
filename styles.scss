@@ -36,6 +36,12 @@ html, body {
   }
 }
 
+@mixin xLarge {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 .container {
   max-width: 1903px;
   max-height: 2084px;
@@ -114,20 +120,22 @@ html, body {
 .productsBox {
 }
 
-.singleProduct {
-  position: relative;
-}
 
 
-.productsList {
+
+.productsList, #products {
   padding: 0;
   margin: 0 -17px 0 -15px;
-  li {
+  .singleProduct {
+    position: relative;
     height: 460px;
     border: 1px solid #d5d3cd;
-    display: inline-block;
+    display: none;
     margin: 15px 15px;
     width: calc(100% / 2 - 34px);
+    &.visible {
+      display: inline-block;
+    }
     &:hover {
       border: 1px solid #000000;
     }
@@ -140,10 +148,11 @@ html, body {
       padding: 4px 2px;
       color: red;
       position: absolute;
-      right: -1px;
       top: -1px;
       margin: 0;
       font-size: 13px;
+      width: 100%;
+      text-align: center;
       span {
         font-weight: bold;
       }
@@ -152,35 +161,32 @@ html, body {
     @include Small {
       height: 460px;
       border: 1px solid #d5d3cd;
-      display: inline-block;
       margin: 15px 15px;
       width: calc(100% / 3 - 34px);
+    }
+    @include medium {
+      p {
+        padding: 9px 10px;
+        right: -1px;
+        width: 69%;
+      }
     }
     @include large {
       height: 460px;
       border: 1px solid #d5d3cd;
-      display: inline-block;
       margin: 15px 15px;
       width: calc(100% / 4 - 34px);
-      p {
-        border: 1px solid red;
-        display: inline-block;
-        padding: 9px 10px;
-        color: red;
-        position: absolute;
-        right: -1px;
-        top: -1px;
-        margin: 0;
-        font-size: 15px;
-      }
     }
   }
 }
 
 .prodImage {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 8%;
+  img {
+    max-width: 100%;
+  }
 }
 
 .productInfo {
@@ -216,13 +222,13 @@ html, body {
 .cartBox {
   display: flex;
   position: absolute;
-  top: 10px;
+  top: 29px;
   left: 9px;
   align-items: center;
+  @include medium {
+    top: 10px;
   }
-  @include large {
-    display: flex;
-    position: absolute;
+  @include xLarge {
     top: 10px;
     left: 46px;
   }
@@ -230,11 +236,11 @@ html, body {
     margin-left: 10px;
     font-size: 12px;
     @include medium {
-        margin-left: 10px;
-        font-size: 14px;
-      }
+      margin-left: 10px;
+      font-size: 14px;
+    }
   }
-
+}
 
 
 .titleBox {

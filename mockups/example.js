@@ -1,4 +1,4 @@
-{
+const data = {
   "count": 5,
   "pages": 1,
   "page": 1,
@@ -257,6 +257,159 @@
       "newProduct": true,
       "shortDescription": "",
       "main_image": "8ac5a0ed53a92cb0828acae8938257a9"
+    },
+    {
+      "id": 1641,
+      "name": "Fotel firmy Kler kolekcja Camerata A080 (Capone)",
+      "can_buy": true,
+      "ean": "",
+      "code": "7823",
+      "unit": {
+        "name": "szt.",
+        "floating_point": false
+      },
+      "rate": 0,
+      "votes": 0,
+      "stockId": 1641,
+      "url": "https://www.outletmeblowy.pl/meble-do-salonu/fotele/fotel-firmy-kler-kolekcja-camerata-a080-capone",
+      "category": {
+        "name": "Fotele",
+        "id": 66
+      },
+      "availability": {
+        "name": "ostatnia sztuka!"
+      },
+      "delivery": {
+        "name": "48 godzin"
+      },
+      "price": {
+        "gross": {
+          "base": "4 990,00 zł",
+          "base_float": 4990,
+          "promo": "3 690,00 zł",
+          "promo_float": 3690,
+          "final": "3 690,00 zł",
+          "final_float": 3690
+        },
+        "net": {
+          "base": "4 056,91 zł",
+          "base_float": 4056.91,
+          "promo": "3 000,00 zł",
+          "promo_float": 3000,
+          "final": "3 000,00 zł",
+          "final_float": 3000
+        }
+      },
+      "producer": {
+        "name": "Kler",
+        "id": 23,
+        "img": "https://www.outletmeblowy.pl/userdata/producers/23.jpg"
+      },
+      "newProduct": true,
+      "shortDescription": "",
+      "main_image": "442458155964ad8b049cd8b3ff6a1be7"
+    },
+    {
+      "id": 1641,
+      "name": "Fotel firmy Kler kolekcja Camerata A080 (Capone)",
+      "can_buy": true,
+      "ean": "",
+      "code": "7823",
+      "unit": {
+        "name": "szt.",
+        "floating_point": false
+      },
+      "rate": 0,
+      "votes": 0,
+      "stockId": 1641,
+      "url": "https://www.outletmeblowy.pl/meble-do-salonu/fotele/fotel-firmy-kler-kolekcja-camerata-a080-capone",
+      "category": {
+        "name": "Fotele",
+        "id": 66
+      },
+      "availability": {
+        "name": "ostatnia sztuka!"
+      },
+      "delivery": {
+        "name": "48 godzin"
+      },
+      "price": {
+        "gross": {
+          "base": "4 990,00 zł",
+          "base_float": 4990,
+          "promo": "3 690,00 zł",
+          "promo_float": 3690,
+          "final": "3 690,00 zł",
+          "final_float": 3690
+        },
+        "net": {
+          "base": "4 056,91 zł",
+          "base_float": 4056.91,
+          "promo": "3 000,00 zł",
+          "promo_float": 3000,
+          "final": "3 000,00 zł",
+          "final_float": 3000
+        }
+      },
+      "producer": {
+        "name": "Kler",
+        "id": 23,
+        "img": "https://www.outletmeblowy.pl/userdata/producers/23.jpg"
+      },
+      "newProduct": true,
+      "shortDescription": "",
+      "main_image": "442458155964ad8b049cd8b3ff6a1be7"
+    },
+    {
+      "id": 1641,
+      "name": "Fotel firmy Kler kolekcja Camerata A080 (Capone)",
+      "can_buy": true,
+      "ean": "",
+      "code": "7823",
+      "unit": {
+        "name": "szt.",
+        "floating_point": false
+      },
+      "rate": 0,
+      "votes": 0,
+      "stockId": 1641,
+      "url": "https://www.outletmeblowy.pl/meble-do-salonu/fotele/fotel-firmy-kler-kolekcja-camerata-a080-capone",
+      "category": {
+        "name": "Fotele",
+        "id": 66
+      },
+      "availability": {
+        "name": "ostatnia sztuka!"
+      },
+      "delivery": {
+        "name": "48 godzin"
+      },
+      "price": {
+        "gross": {
+          "base": "4 990,00 zł",
+          "base_float": 4990,
+          "promo": "3 690,00 zł",
+          "promo_float": 3690,
+          "final": "3 690,00 zł",
+          "final_float": 3690
+        },
+        "net": {
+          "base": "4 056,91 zł",
+          "base_float": 4056.91,
+          "promo": "3 000,00 zł",
+          "promo_float": 3000,
+          "final": "3 000,00 zł",
+          "final_float": 3000
+        }
+      },
+      "producer": {
+        "name": "Kler",
+        "id": 23,
+        "img": "https://www.outletmeblowy.pl/userdata/producers/23.jpg"
+      },
+      "newProduct": true,
+      "shortDescription": "",
+      "main_image": "442458155964ad8b049cd8b3ff6a1be7"
     }
   ]
 }
