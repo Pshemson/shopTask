@@ -22,12 +22,12 @@ productContainer.innerHTML = `
               <span class="savePrice">2000,00 zł </span>
             </p>
             <div class="prodImage">
-              <img src="https://outletmeblowy.pl/environment/cache/images/300_300_productGfx_${product.main_image}.jpg">
+              <a href="#"><img src="https://outletmeblowy.pl/environment/cache/images/300_300_productGfx_${product.main_image}.jpg"></a>
             </div>
             <div class="productInfo">
 <span class="priceNew">3690 zł</span>
               <span class="priceOld">5690 zł</span>
-              <h2>Kanapa 3 firmy Kler kolekcja Canone W001</h2>
+              <a href="#"><h2>Kanapa 3 firmy Kler kolekcja Canone W001</h2></a> 
               <span class="nameBrand"><a href="#">Grupa Kler</a></span>
             </div>
           </div>`;
