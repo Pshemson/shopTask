@@ -7,6 +7,7 @@ html, body {
   padding: 0;
   background: #fff;
   font-family: 'Gotham Book', sans-serif;
+  min-height: 100vh;
 }
 
 //Fonts
@@ -163,11 +164,12 @@ html, body {
   margin: 0 auto;
   .singleProduct {
     position: relative;
-    height: 400px;
     border: 1px solid #d5d3cd;
-    display: none;
     margin: 6px;
+    display: none;
+    height: 400px;
     width: calc(100% / 2 - 12px);
+    transition: 300ms ease-in-out  all;
     &.visible {
       display: inline-block;
     }
@@ -231,6 +233,7 @@ html, body {
   }
   h2 {
     font-size: 13px;
+    min-height: 36px;
     line-height: 19px;
     font-weight: bold;
 }
