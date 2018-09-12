@@ -21,11 +21,8 @@ html, body {
   max-width: 1530px;
   margin: 0 auto; }
 
-.banner {
-  background-color: #ea2423;
+.banner img {
   width: 100%; }
-  .banner img {
-    width: 100%; }
 
 .firstPart {
   position: relative;
