@@ -215,8 +215,11 @@ html, body {
   .timeBox p {
     text-transform: uppercase;
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: normal; }
+    @media (min-width: 768px) {
+      .timeBox p {
+        font-size: 20px; } }
     .timeBox p span {
       font-weight: bold; }
 
@@ -224,6 +227,10 @@ html, body {
   display: flex;
   align-items: center; }
   .alertBox p {
-    margin-left: 15px; }
+    margin-left: 15px;
+    font-size: 15px; }
+    @media (min-width: 768px) {
+      .alertBox p {
+        font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,5 @@
 const settings = {
-  visibleProducts: 8
+  visibleProducts: 4
 };
 
 const renderProduct = (product, ul, isVisible) => {
