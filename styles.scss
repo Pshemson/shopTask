@@ -18,7 +18,6 @@ html, body {
 }
 
 
-
 //Mixins
 //RWD:  Minimum widths to apply styles (mobile first)
 
@@ -68,14 +67,18 @@ html, body {
 
 .banner {
   background-color: rgb(234,36,35);
-  height: 300px;
-  position: relative;
+  //height: 300px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .firstPart {
-  position: absolute;
+  position: relative;
   left: 82px;
   top: 30px;
+  display: inline-block;
   span {
     p {
       color: rgb(255,239,58);
@@ -99,9 +102,8 @@ html, body {
       border: 1px solid black;
       background: black;
       padding: 19px 42px;
-      left: 225px;
-      width: 290px;
       top: 17px;
+      right: -294px;
     }
     &:nth-of-type(3) {
       padding: 18px 2px;
@@ -111,10 +113,10 @@ html, body {
       background: white;
       position: absolute;
       top: 169px;
-      left: 334px;
       transform: rotate(15deg);
       text-align: center;
       font-size: 17px;
+      right: -170px;
       img {
         transform: rotate(-19deg);
       }
@@ -122,6 +124,30 @@ html, body {
   }
 }
 
+.midPart {
+  position: relative;
+  right: -435px;
+  top: -305px;
+  display: inline-block;
+  span {
+    color: rgb(255, 239, 58);
+    font-weight: bold;
+    font-size: 46px;
+    margin: 0;
+    p {
+      color: black;
+      font-size: 21px;
+      font-weight: normal;
+    }
+    &:nth-of-type(1) {
+      position: absolute;
+      top: 94px;
+      font-size: 136px;
+      color: #ffef3a;
+      line-height: 26px;
+    }
+  }
+}
 
 
 //Products section
@@ -134,7 +160,7 @@ html, body {
 
 .productsList, #products {
   padding: 0;
-  margin: 0 -17px 0 -15px;
+  margin: 0 auto;
   .singleProduct {
     position: relative;
     height: 460px;

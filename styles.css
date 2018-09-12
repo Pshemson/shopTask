@@ -23,13 +23,15 @@ html, body {
 
 .banner {
   background-color: #ea2423;
-  height: 300px;
-  position: relative; }
+  width: 100%; }
+  .banner img {
+    width: 100%; }
 
 .firstPart {
-  position: absolute;
+  position: relative;
   left: 82px;
-  top: 30px; }
+  top: 30px;
+  display: inline-block; }
   .firstPart span p {
     color: #ffef3a;
     font-weight: bold;
@@ -50,9 +52,8 @@ html, body {
     border: 1px solid black;
     background: black;
     padding: 19px 42px;
-    left: 225px;
-    width: 290px;
-    top: 17px; }
+    top: 17px;
+    right: -294px; }
   .firstPart span:nth-of-type(3) {
     padding: 18px 2px;
     border-radius: 50%;
@@ -61,16 +62,37 @@ html, body {
     background: white;
     position: absolute;
     top: 169px;
-    left: 334px;
     transform: rotate(15deg);
     text-align: center;
-    font-size: 17px; }
+    font-size: 17px;
+    right: -170px; }
     .firstPart span:nth-of-type(3) img {
       transform: rotate(-19deg); }
 
+.midPart {
+  position: relative;
+  right: -435px;
+  top: -305px;
+  display: inline-block; }
+  .midPart span {
+    color: #ffef3a;
+    font-weight: bold;
+    font-size: 46px;
+    margin: 0; }
+    .midPart span p {
+      color: black;
+      font-size: 21px;
+      font-weight: normal; }
+    .midPart span:nth-of-type(1) {
+      position: absolute;
+      top: 94px;
+      font-size: 136px;
+      color: #ffef3a;
+      line-height: 26px; }
+
 .productsList, #products {
   padding: 0;
-  margin: 0 -17px 0 -15px; }
+  margin: 0 auto; }
   .productsList .singleProduct, #products .singleProduct {
     position: relative;
     height: 460px;
