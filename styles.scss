@@ -283,6 +283,20 @@ html, body {
   }
 }
 
+#productsMenu {
+  padding: 17px;
+  b {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid black;
+    transition: 0.4s all;
+    &:hover {
+      background-color: #EA2423;
+      color: white;
+    }
+  }
+  }
+
 
 .titleBox {
   display: flex;
