@@ -41,6 +41,37 @@ const toggleProductsVisibility = () => {
   })
 };
 
+
+
+const toggleProductsSet1 = () => {
+  const [...allProducts] = document.querySelectorAll('#products li');
+  allProducts.map((product) => {
+
+
+    return product.classList.remove('list');
+  })
+};
+
+
+
+
+const toggleProductsSet = () => {
+  const [...allProducts] = document.querySelectorAll('#products li');
+  allProducts.map((product) => {
+
+    if (settings.visibleProducts) {
+      return product.classList.add('list');
+    }
+
+    return product.classList.remove('list');
+  })
+};
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function (event) {
   console.log(data);
 
@@ -56,6 +87,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     settings.visibleProducts = Number(button.innerText);
     return toggleProductsVisibility();
   }));
+
+
+
+  const gridList = document.querySelectorAll('#productsSet span:nth-child(1)');
+
+  [...gridList].map(span => span.addEventListener("click", () => {
+    settings.visibleProducts = span;
+    return toggleProductsSet1();
+  }));
+
+
+  const gridList2 = document.querySelectorAll('#productsSet span:nth-child(2)');
+
+  [...gridList2].map(span => span.addEventListener("click", () => {
+    settings.visibleProducts = span;
+    return toggleProductsSet();
+  }));
+
+
+
+
+
 
   const renderProducts = () => data.list.map(item => renderProduct(item, productList));
 

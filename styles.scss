@@ -173,6 +173,26 @@ html, body {
     &.visible {
       display: inline-block;
     }
+    &.list {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      .productInfo {
+        position: absolute;
+        bottom: 12px;
+        text-align: right;
+        right: 12px;
+      }
+      .prodImage {
+        position: absolute;
+        top: 24%;
+        left: 4%;
+      img {
+        width: 150%;
+        max-width: 150%;
+      }
+      }
+    }
     &:hover {
       border: 1px solid #000000;
     }
@@ -339,3 +359,18 @@ html, body {
 }
 
 
+
+#productsSet {
+  display: none;
+  @include Small {
+    float: right;
+    margin-top: -7px;
+    cursor: pointer;
+    display: inline-block;
+    span {
+      &:nth-of-type(1) {
+        margin-right: 9px;
+      }
+    }
+  }
+}
