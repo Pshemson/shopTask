@@ -159,24 +159,17 @@ html, body {
 
 
 
-.productsList, #products {
+#products {
   padding: 0;
   margin: 0 auto;
-  .singleProduct {
-    position: relative;
-    border: 1px solid #d5d3cd;
-    margin: 6px;
-    display: none;
-    height: 400px;
-    width: calc(100% / 2 - 12px);
-    transition: 300ms ease-in-out  all;
-    &.visible {
-      display: inline-block;
-    }
-    &.list {
+  &.list {
+    .singleProduct {
       display: block;
       margin: 0 auto;
       width: 90%;
+      &.visible {
+        display: block;
+      }
       .productInfo {
         position: absolute;
         bottom: 12px;
@@ -187,11 +180,23 @@ html, body {
         position: absolute;
         top: 24%;
         left: 4%;
-      img {
-        width: 150%;
-        max-width: 150%;
+        img {
+          width: 150%;
+          max-width: 150%;
+        }
       }
-      }
+    }
+  }
+  .singleProduct {
+    position: relative;
+    border: 1px solid #d5d3cd;
+    margin: 6px;
+    display: none;
+    height: 400px;
+    width: calc(100% / 2 - 12px);
+    transition: 300ms ease-in-out  all;
+    &.visible {
+      display: inline-block;
     }
     &:hover {
       border: 1px solid #000000;

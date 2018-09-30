@@ -31,8 +31,9 @@ const renderProduct = (product, ul) => {
 
 const toggleProductsVisibility = () => {
   const [...allProducts] = document.querySelectorAll('#products li');
+  // map wykonuje daną operacje na kazdym elemencie z tablicy
   allProducts.map((product, index) => {
-
+// index to number danego elementu tablicy (zaczyna sie od 0)
       if (index+1 <= settings.visibleProducts) {
         return product.classList.add('visible');
       }
@@ -41,45 +42,21 @@ const toggleProductsVisibility = () => {
   })
 };
 
+const toggleProductsSet = (isListButton) => {
+  const allProducts = document.querySelector('#products');
 
-
-const toggleProductsSet1 = () => {
-  const [...allProducts] = document.querySelectorAll('#products li');
-  allProducts.map((product) => {
-
-
-    return product.classList.remove('list');
-  })
+  if (isListButton === true) {
+    return allProducts.classList.add('list');
+  }
+  return allProducts.classList.remove('list');
 };
-
-
-
-
-const toggleProductsSet = () => {
-  const [...allProducts] = document.querySelectorAll('#products li');
-  allProducts.map((product) => {
-
-    if (settings.visibleProducts) {
-      return product.classList.add('list');
-    }
-
-    return product.classList.remove('list');
-  })
-};
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  console.log(data);
-
   const productList = document.querySelector('#products');
-
+  const listButton = document.querySelector('#productsSet span:nth-child(2)');
+  const gridList = document.querySelector('#productsSet span:nth-child(1)');
  // pseudo-tablica z elementami <b></b>
   const buttons = document.querySelectorAll('#productsMenu b');
-
   // zamieniam na zwykla tablice
   const buttonsArray = [...buttons];
 
@@ -88,31 +65,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
     return toggleProductsVisibility();
   }));
 
+  listButton.addEventListener("click", () => {
+    return toggleProductsSet(true);
+  });
 
-
-  const gridList = document.querySelectorAll('#productsSet span:nth-child(1)');
-
-  [...gridList].map(span => span.addEventListener("click", () => {
-    settings.visibleProducts = span;
-    return toggleProductsSet1();
-  }));
-
-
-  const gridList2 = document.querySelectorAll('#productsSet span:nth-child(2)');
-
-  [...gridList2].map(span => span.addEventListener("click", () => {
-    settings.visibleProducts = span;
-    return toggleProductsSet();
-  }));
-
-
-
-
-
+  gridList.addEventListener("click", () => {
+    return toggleProductsSet(false);
+  });
 
   const renderProducts = () => data.list.map(item => renderProduct(item, productList));
 
   renderProducts();
   return toggleProductsVisibility();
-
 });
+
+function timeReamining(day, hour, min, sec) {
+  const actualTime = new Date();
+  const eventTime = new Date(day, hour, min, sec);
+  const timeLeft = eventTime.getTime() - actualTime.getTime();
+
+  if (timeLeft > 0)
+  {
+
+    const s = timeLeft / 1000;   // sekundy
+
+    const min = s / 60;               // minuty
+
+    const h = min / 60;               // godziny
+
+
+
+    const secLeft = Math.floor(s  % 60);    // pozostało sekund
+
+    const minLeft = Math.floor(min % 60); // pozostało minut
+
+    const hourLeft = Math.floor(h);          // pozostało godzin
+
+
+    console.log(hourLeft + " : " + minLeft + " : " + secLeft);
+
+  }
+  else {
+    console.log("Koniec promocji");
+  }
+
+}
